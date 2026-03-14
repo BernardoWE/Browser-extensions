@@ -1,0 +1,258 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "NotoSans" sans-serif;
+}
+
+.body-container {
+    background-color: hsl(227, 75%, 14%);
+    min-height: 100vh;
+}
+
+.container {
+    margin: 2rem 15vw;
+    width: 70vw;
+    min-width: 650px;
+    min-height: 100%;
+}
+
+
+.extensions {
+    display: flex;
+    justify-content: space-between;
+    background-color: hsl(226, 25%, 17%);
+    border-radius: 20px;
+    padding: 20px;
+}
+.dark-light{
+    align-self: center;
+    background-color: hsl(225, 23%, 24%);
+    padding: 8px 10px;
+    border-radius: 10px;
+}
+.dark-light:hover{
+    background-color: hsl(226, 11%, 37%);
+}
+.extensions input{
+    display: none;
+}
+
+svg {
+    fill: #fff;
+}
+
+.extensions-list {
+    color: #ffF;
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0 1rem 0;
+
+}
+
+.ex-btn {
+    gap: 10px;
+    display: flex;
+}
+
+.ex-btn label{
+    background-color: hsl(226, 25%, 17%);
+    border-radius: 10rem;
+    padding: 10px 20px 10px 20px;
+    cursor: pointer;
+    color: #fff;
+
+}
+.ex-btn label:hover{
+    background-color: hsl(226, 11%, 37%);
+}
+.ex-btn label.bola:hover{
+    /* background-color: hsl(226, 11%, 37%); */
+    background-color: hsl(3, 86%, 64%);
+}
+
+.ex-btn .bola {
+    background-color: hsl(3, 86%, 64%);
+    color: hsl(227, 75%, 14%);
+}
+
+.ex-btn input {
+    display: none;
+
+}
+.bunda{
+    display: flex;
+    gap: 10px;
+}
+.button-js{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}   
+.button-js .button-remove {
+     background-color: hsl(226, 25%, 17%);
+    border-radius: 10rem;
+    padding: 10px 15px 10px 15px;
+    cursor: pointer;
+    color: white;
+}
+
+.button-js button:hover {
+    background-color: hsl(3, 86%, 64%);
+    color: hsl(227, 75%, 14%);
+    /* border: none; */
+}
+.card {
+    border: 1px solid #ccc;
+    /* margin:10px; */
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    background: hsl(226, 25%, 17%);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    
+}
+
+.name {
+    color: hsl(0, 0%, 100%);
+}
+
+#extensions-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.logo {
+    width: 40px;
+    display: flex;
+    align-self: flex-start;
+}
+
+
+.description {
+    color: gray;
+    font-size: 14px;
+    grid-column: 2 / 3;
+}
+
+
+/* Container do toggle */
+.switch {
+  position: relative;
+  display: inline-block;
+  /* width: 50px;
+  height: 26px; */
+  width: 35px;
+  align-self: center;
+}
+
+/* Esconde o checkbox padrão */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Slider / fundo do toggle */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0;
+  right: 0; bottom: 0;
+  background-color: hsl(226, 11%, 37%);
+  transition: 0.4s;
+  border-radius: 26px; /* arredonda totalmente o fundo */
+}
+
+/* Bolinha interna */
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  left: 3px;
+  bottom: 2px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%; /* bolinha arredondada */
+}
+
+/* Quando checked (ligado) */
+input:checked + .slider {
+  background-color: hsl(3, 86%, 64%); /* muda cor do fundo */
+}
+
+input:checked + .slider::before {
+  transform: translateX(14px); /* move a bolinha para o outro lado */
+}
+
+/* Light mode */
+.container-light{
+    background-color: hsl(217, 61%, 90%);
+}
+.extensions-light{
+    background-color: #fff;
+}
+.extensionsList-light{
+    color: hsl(227, 75%, 14%);
+}
+.svg-light {
+    fill:hsl(227, 75%, 14%);
+}
+.ex-btn .label-light{
+    color: hsl(227, 75%, 14%);
+    background-color: #fff;
+}
+.ex-btn .label-light:hover{
+    opacity:.9;
+    background-color: hsl(0, 0%, 93%);
+}
+.ex-btn .bola, .label-light{
+    background-color: hsl(3, 86%, 64%);
+    /* color: hsl(227, 75%, 14%); */
+}
+.card-light{
+    background-color: #fff;
+}
+.card-light h3{
+    color: hsl(227, 75%, 14%);
+}
+.button-js .button-light{
+    background-color: #fff;
+    color:hsl(227, 75%, 14%) ;
+}
+.icon-light{
+    background-color: hsl(0, 0%, 93%);
+}
+.card-none{
+    display: none;
+}
+
+@media screen and (max-width:600px) {
+    #extensions-container{
+        grid-template-columns: 1fr;
+        gap: 10px;
+
+    }
+    .container {
+        margin: 2rem 5vw;
+        width: 90%;
+        min-width: 250px;
+        min-height: 100vh;
+        
+    }
+    .body-container{
+        width: 100vw;
+    }
+    .extensions-list {
+    gap: 10px;
+    /* display: block; */
+    flex-direction: column;
+    align-items: center;
+}
+}
