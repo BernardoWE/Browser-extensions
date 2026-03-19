@@ -229,6 +229,9 @@ input:checked + .slider::before {
 .icon-light{
     background-color: hsl(0, 0%, 93%);
 }
+.icon-light:hover{
+    background-color: hsl(0, 0%, 40%);
+}
 .card-none{
     display: none;
 }
